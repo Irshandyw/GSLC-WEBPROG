@@ -3,7 +3,7 @@
 @section('container')
     <div class="text-center mb-4">
         <h3>Nilaimu Adalah.. </h3>
-        85
+        {{$nilai}}
     </div>
     <div class="d-flex justify-content-center">
         @if (($nilai >= 0) and ($nilai <= 60))

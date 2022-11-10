@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+Route::get('/home', [ContentController::class, 'index'] );
+
+Route::get('/contents', [ContentController::class, 'about']);
+
+Route::get('/bootcamp', function () {
+    return view('bootcamp');
 });
 
-Route::get('/contents', function () {
-    $nilai = 85;
-    return view('contents', compact('nilai'));
+Route::get('/awalan', function () {
+    return view('awalan');
 });
+
